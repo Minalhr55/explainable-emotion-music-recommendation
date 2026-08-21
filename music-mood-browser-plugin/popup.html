@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 240px;
+            font-family: Arial, sans-serif;
+            padding: 12px;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        h4 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            text-align: center;
+            color: #1B365D;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+
+        button {
+            padding: 8px 4px;
+            font-size: 10px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            transition: opacity 0.2s ease;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        /* 6 Mood Category Distinct Color Coding */
+        #excited_elated { background-color: #E74C3C; } /* Red */
+        #angry_stressed { background-color: #E67E22; } /* Orange */
+        #sad_depressed  { background-color: #3498DB; } /* Blue */
+        #bored_tired    { background-color: #7F8C8D; } /* Grey */
+        #calm_relaxed   { background-color: #2ECC71; } /* Green */
+        #content_serene { background-color: #1ABC9C; } /* Teal */
+
+        #export {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: #333333;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        #status {
+            margin-top: 8px;
+            font-size: 11px;
+            text-align: center;
+            color: #555;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Select Current Mood!</h4>
+    <div class="grid">
+        <button id="excited_elated">Excited / Elated<br>(+V, +A)</button>
+        <button id="angry_stressed">Angry / Stressed<br>(-V, +A)</button>
+        <button id="sad_depressed">Sad / Depressed<br>(-V, -A)</button>
+        <button id="bored_tired">Bored / Tired<br>(slight -V, -A)</button>
+        <button id="calm_relaxed">Calm / Relaxed<br>(+V, -A)</button>
+        <button id="content_serene">Content / Serene<br>(+V, slight -A)</button>
+    </div>
+
+    <button id="export">Export CSV</button>
+    <div id="status">Ready to log</div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
